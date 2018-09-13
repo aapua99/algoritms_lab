@@ -1,6 +1,5 @@
 from printer import Printer
-from Read import Read
-import time
+from Read import Reader
 from timeit import default_timer as timer
 
 
@@ -43,7 +42,7 @@ class Sort:
 
 
 if __name__ == '__main__':
-    read = Read()
+    read = Reader()
 
     array = [Printer("Canon", 5, 6000), Printer("Canon", 8, 9000), Printer("HP", 2, 3000), Printer("HP", 7, 6500),
              Printer("HP", 2, 2000)]
