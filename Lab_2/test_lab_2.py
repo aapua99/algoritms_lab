@@ -28,6 +28,12 @@ class Test(unittest.TestCase):
         test.changing_calendar()
         self.assertEqual(test.result, [(1, 9)])
 
+    def test3(self):
+        test = Calendar([(0,1), (0,6), (2,5), (3,1), (10,12), (12, 4)])
+        test.array=test.quick_sort(test.array)
+        test.changing_calendar()
+        self.assertEqual(test.result, [(0, 6), (10, 12)])
+
 
 if __name__ == '__main__':
     unittest.main
