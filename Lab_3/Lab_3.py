@@ -1,15 +1,15 @@
-def search(k, result, i):
-    lenght = len(k)
+def search(mas, result, i):
+    lenght = len(mas)
     j = 0
-    while j < len(k):
-        if (k[j][0] == i):
-            n = k[j][1]
+    while j < len(mas):
+        if (mas[j][0] == i):
+            n = mas[j][1]
             if (n % 2 == 0):
                 result[0].append(n)
             else:
                 result[1].append(n)
-            k.pop(j)
-            search(k, result, n)
+            mas.pop(j)
+            search(mas, result, n)
             j = 0
         else:
             j += 1
@@ -17,10 +17,10 @@ def search(k, result, i):
 
 
 if __name__ == "__main__":
-    n = input()
+    number_of_pairs = input()
     plem = []
     list_pairs = []
-    for i in range(0, int(n)):
+    for i in range(0, int(number_of_pairs)):
         var = input().split()
         list_pairs.append([int(var[0]), int(var[1])])
     while (len(list_pairs) > 0):
